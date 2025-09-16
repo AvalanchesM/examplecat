@@ -1,18 +1,8 @@
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовый кот!</title>
-    <link rel="stylesheet" href="./styles/style.css">
 
-    <meta property="og:title" content="Тестовый кот">
-    <meta property="og:description" content="Мой тестовый кот">
-    <meta property="og:image" content="https://avalanchesm.github.io/examplecat/image.jpg">
-    <meta property="og:url" content="https://avalanchesm.github.io/examplecat/">
-  </head>
-  <body>
-   
-<!-- Yandex.Metrika counter -->
+<head>
+ <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -25,7 +15,10 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/103620208" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
-
+  </head>
+  
+  <body>
+  
 <div itemscope itemtype="http://schema.org/NewsArticle">
       <h1 itemprop="headline">Это заголовок разметки Schema.org Microdata</h1>
     
