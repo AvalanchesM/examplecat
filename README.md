@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -30,8 +29,6 @@
      <meta itemprop="identifier" content="12345">
 
       <h1 itemprop="headline">Это заголовок разметки Schema.org Microdata</h1>
-<h2 itemprop="alternativeHeadline"> Тут что-то о котах.</h2>
-
     </header>
     
     <main>
@@ -42,9 +39,5 @@
 За способность уничтожать грызунов люди ценят кошек около 10 000 тысяч лет. Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов, а также феромоны и движения тела.
 </p>
     </main>
-    <footer>
-      <p>Сюда бы я вписал информацию об авторе и ссылки на другие сайты</p>
-    </footer>
-    <!-- сюда можно подключить jquery <script src="scripts/app.js" defer></script> -->
   </body>
 </html>
