@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заголовок страницы</title>
+    <title>Тестовый кот!</title>
     <link rel="stylesheet" href="./styles/style.css">
 
-    <meta property="og:title" content="Заголовок страницы в OG">
-    <meta property="og:description" content="Описание страницы в OG">
-    <meta property="og:image" content="https://examplecat.com/image.jpg">
-    <meta property="og:url" content="https://examplecat.com/">
+    <meta property="og:title" content="Тестовый кот">
+    <meta property="og:description" content="Мой тестовый кот">
+    <meta property="og:image" content="https://avalanchesm.github.io/examplecat/image.jpg">
+    <meta property="og:url" content="https://avalanchesm.github.io/examplecat/">
   </head>
   <body>
     <!-- Yandex.Metrika counter -->
@@ -27,32 +27,20 @@
     <!-- /Yandex.Metrika counter -->
 
      <header>
-      <h1>Личный сайт</h1>
-      <p>Catcat</p>
-      <nav>
-        <ul>
-          <li><a href="index.html">Эта страница</a></li>
-          <li><a href="catalog.html">Другая страница</a></li>
-        </ul>
-      </nav>
+     <meta itemprop="identifier" content="12345">
+
+      <h1 itemprop="headline">Это заголовок разметки Schema.org Microdata</h1>
+<h2 itemprop="alternativeHeadline"> Тут что-то о котах.</h2>
+
     </header>
+    
     <main>
-      <article>
-        <section>
-          <h2>Первая секция</h2>
-          <p>Она обо мне</p>
-          <img src="images/image.png" alt="Человек и пароход">
-          <p>Но может быть и о семантике, я пока не решил.</p>
-        </section>
-        <section>
-          <h2>Вторая секция</h2>
-          <p>Она тоже обо мне</p>
-        </section>
-        <section>
-          <h2>И третья</h2>
-          <p>Вы уже должны были начать догадываться.</p>
-        </section>
-      </article>
+    <div itemprop="author">Котий Котов</div>
+      <p itemprop="articleBody">
+  Кошка — домашнее животное, одно из наиболее популярных (наряду с собаками) «животных-компаньонов» или домашних животных. Кошки — млекопитающие и плотоядные животные.
+
+За способность уничтожать грызунов люди ценят кошек около 10 000 тысяч лет. Являясь одиночным охотником на грызунов и других мелких животных, кошка — социальное животное, использующее для общения широкий диапазон звуковых сигналов, а также феромоны и движения тела.
+</p>
     </main>
     <footer>
       <p>Сюда бы я вписал информацию об авторе и ссылки на другие сайты</p>
