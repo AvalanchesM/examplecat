@@ -34,16 +34,13 @@ window.dataLayer = window.dataLayer || []
             <p>Люди рассказывают о котах</p>
     
   <script>
-         dataLayer.push({
-            'event': 'logging-99', 'person': {
-                'login': 'Jonh',
-                'email': 'jonh@gmail.com',
-                'auth': {
-                    'isLogin': 'true',
-                    'isVIP': 'false'
-                }
-            }
+  
+    document.querySelector('button').addEventListener('click', () => {
+        dataLayer.push({
+            'event':'logging-99',
+            'ip': 'ip'
         })
+    });
     </script>
     
 <button class="my_btn">Кнопотуля</button>
