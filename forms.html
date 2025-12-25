@@ -15,25 +15,6 @@
             border-radius: 4px;
         }
     </style>
-</head>
-
-    
-<body>
-
-    
-    <button id="showMessageButton">Нажми меня!</button>
-    <div id="message">Это сообщение появилось после нажатия кнопки!</div>
-
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const button = document.getElementById('showMessageButton');
-            const message = document.getElementById('message');
-
-            button.addEventListener('click', function() {
-                message.style.display = 'block';
-            });
-        });
-    </script>
 
     
 <!-- Yandex.Metrika counter -->
@@ -52,5 +33,26 @@
 
 
 
+</head>
+
+    
+<body>
+
+    
+    <button id="showMessageButton">Нажми меня!</button>
+    <div id="message">Это сообщение появилось после нажатия кнопки!</div>
+
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('showMessageButton');
+            const message = document.getElementById('message');
+
+            button.addEventListener('click', function() {
+                message.style.display = 'block';
+            });
+        });
+</script>
+
+    
 </body>
 </html>
