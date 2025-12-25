@@ -20,7 +20,11 @@
     
 <body>
 
-            <script>
+    
+    <button id="showMessageButton">Нажми меня!</button>
+    <div id="message">Это сообщение появилось после нажатия кнопки!</div>
+
+<script>
         document.addEventListener('DOMContentLoaded', function() {
             const button = document.getElementById('showMessageButton');
             const message = document.getElementById('message');
@@ -29,24 +33,6 @@
                 button.style.display = 'none';
                 message.style.display = 'block';
             });
-        });
-    </script>
-    
-    <button id="showMessageButton">Нажми меня!</button>
-    <div id="message">Это сообщение появилось после нажатия кнопки!</div>
-
-    <script>
-        // Получаем элементы по их ID
-        const button = document.getElementById('showMessageButton');
-        const message = document.getElementById('message');
-
-        // Добавляем обработчик события клика на кнопку
-        button.addEventListener('click', function() {
-            // Скрываем кнопку
-            button.style.display = 'none';
-            
-            // Показываем сообщение
-            message.style.display = 'block';
         });
     </script>
 
