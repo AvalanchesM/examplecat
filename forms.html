@@ -81,9 +81,10 @@
     const form = document.getElementById('myForm');
     const message = document.getElementById('message');
 
-    form.addEventListener('submit', function(event) {
-      // Отменяем отправку формы и перезагрузку страницы
-      event.preventDefault();
+    // Без перезагрузок, ура!
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+});
 
       // Показываем сообщение с плавным появлением
       message.classList.add('visible');
