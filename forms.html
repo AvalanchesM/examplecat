@@ -16,7 +16,22 @@
         }
     </style>
 </head>
+
+    
 <body>
+
+            <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const button = document.getElementById('showMessageButton');
+            const message = document.getElementById('message');
+
+            button.addEventListener('click', function() {
+                button.style.display = 'none';
+                message.style.display = 'block';
+            });
+        });
+    </script>
+    
     <button id="showMessageButton">Нажми меня!</button>
     <div id="message">Это сообщение появилось после нажатия кнопки!</div>
 
