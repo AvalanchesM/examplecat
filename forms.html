@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Форма без отправки</title>
+  <title>Форма с сообщением</title>
   <style>
     .form-container {
       max-width: 400px;
@@ -13,17 +13,19 @@
     }
 
     .message {
-      padding: 15px;
+      display: none; /* Скрыто по умолчанию */
+      padding: 12px;
       background-color: #d4edda;
       color: #155724;
-      border-radius: 8px;
-      text-align: center;
+      border-radius: 6px;
+      margin-top: 15px;
       font-weight: bold;
       opacity: 0;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.4s ease;
     }
 
-    .message.show {
+    .message.visible {
+      display: block;
       opacity: 1;
     }
 
@@ -37,9 +39,10 @@
     input[type="email"] {
       width: 100%;
       padding: 8px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      box-sizing: border-box;
     }
 
     button {
@@ -57,7 +60,7 @@
   </style>
 </head>
 <body>
-  <div class="form-container" id="formContainer">
+  <div class="form-container">
     <form id="myForm">
       <label for="name">Имя:</label>
       <input type="text" id="name" name="name" required>
@@ -67,32 +70,28 @@
 
       <button type="submit">Отправить</button>
     </form>
+
+    <!-- Место для сообщения (изначально скрыто) -->
+    <div id="message" class="message">
+      Спасибо! Тест пройден
+    </div>
   </div>
 
   <script>
     const form = document.getElementById('myForm');
-    const container = document.getElementById('formContainer');
+    const message = document.getElementById('message');
 
     form.addEventListener('submit', function(event) {
-      // Отменяем стандартное поведение (отправку и перезагрузку)
+      // Отменяем отправку формы и перезагрузку страницы
       event.preventDefault();
 
-      // Создаём элемент с сообщением
-      const message = document.createElement('div');
-      message.className = 'message';
-      message.textContent = 'Спасибо! Ваши данные успешно получены.';
+      // Показываем сообщение с плавным появлением
+      message.classList.add('visible');
 
-      // Вставляем сообщение вместо формы
-      container.innerHTML = '';
-      container.appendChild(message);
-
-      // Добавляем класс для плавного появления
-      setTimeout(() => {
-        message.classList.add('show');
-      }, 10);
+      // Дополнительно: можно очистить поля формы
+      // form.reset();
     });
   </script>
-
     
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
