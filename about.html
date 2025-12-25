@@ -45,56 +45,38 @@ window.dataLayer = window.dataLayer || []
     });
     </script>
 
-    <div>
 
-        var f = document.querySelector('form')
+<body>
+    <form id="myForm">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <button type="submit">Отправить</button>
+    </form>
 
-f.addEventListener('submit', function(e) {
-  e.preventDefault();
-  var data = new FormData(this) // Сборка формы 
-  var url = 'https://jsonplaceholder.typicode.com/posts'
-  fetch(url, {
-      method: 'post',
-      headers: {
-        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-      },
-      body: data // Отправка самой формы
-    })
-    .then(response => response.json())
-    .then((json) => { // Ответ
-      if (json.id === 101) { // Для примера проверка пройдена если id === 101
-        // Добавление поля
-        var info = document.querySelector('.info')
-        info.innerText = 'Удачно Отправлено'
-      }
-      // Дебаг узнать что прошла форма
-      console.log(json)
-    })
-    .catch(err => console.log(err));
-})
-    </div>
+    <script>
+        // Получаем форму
+        const form = document.getElementById('myForm');
 
+        // Обработчик события отправки формы
+        form.addEventListener('submit', function(event) {
+            // Отменяем стандартное поведение (отправку на сервер)
+            event.preventDefault();
 
-<form action="#" class="form">
-  <div class="form__field">
-    <input type="text" name="name" placeholder="Имя*" required />
-  </div>
-  <div class="form__field">
-    <input type="email" name="name" placeholder="E-Mail" />
-    <span class="form__error">Это поле должно содержать E-Mail в формате no-name@mail.com</span>
-  </div>
-  <div class="form__field">
-    <input type="tel" name="name" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" />
-    <span class="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
-  </div>
-  <div class="form__field">
-    <input type="url" name="name" placeholder="Ваш сайт" />
-    <span class="form__error">Это поле должно содержать URL в формате http://mysite.ru</span>
-  </div>
+            // Создаём элемент с сообщением
+            const message = document.createElement('div');
+            message.className = 'message';
+            message.textContent = 'Спасибо! Ваши данные получены.';
 
-  <button class="btn btn-primary" type="submit">Submit</button>
-  <div class="info container"></div>
-</form> 
+            // Заменяем форму на сообщение
+            form.replaceWith(message);
+        });
+    </script>
+</body>
+</html>
 
 </body>
 </html>
