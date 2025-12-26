@@ -33,16 +33,7 @@ window.dataLayer = window.dataLayer || []
 <!-- /Yandex.Metrika counter -->
             <p>Люди рассказывают о котах</p>
 
-    <button class="my_btn">Кнопотуля</button>
-    
-  <script>
-  
-    document.querySelector('my_btn').addEventListener('click', () => {
-        dataLayer.push({
-            'event':'tyk'
-        })
-    });
-    </script>
+<button onclick="dataLayer.push({'event': 'tyk'});">Кнопотуля</button>
 
 
     <form id="myForm">
